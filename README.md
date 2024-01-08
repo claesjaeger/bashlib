@@ -34,10 +34,10 @@
     <img src="images/bashlib.png" alt="Logo" width="500 heigth="500">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">The Bash Library</h3>
 
   <p align="center">
-    project_description
+    A collection of functions that come in handy and can be reused in several scripts.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
