@@ -1,4 +1,11 @@
 
+##
+# Ask for a password and replace the entered charecter with asterix
+#
+# Use it like this:
+# pwd="$(ask Password)"
+#
+# Reference:
 # https://stackoverflow.com/questions/1923435/how-do-i-echo-stars-when-reading-password-with-read
 # https://stackoverflow.com/a/63503388/18539543
 
@@ -34,6 +41,3 @@ ask() {
     printf '%s\n' "${reply}"
 }
 
-pwd="$(ask Password)"
-
-echo "Your password is $pwd"
