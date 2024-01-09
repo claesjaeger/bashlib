@@ -20,7 +20,7 @@ function header() {
   else
     HASHNUMBER=60
   fi
-  _hashes $HASNUMBER
+  _hashes $HASHNUMBER
   echo \# "$1"
-  _hashes $HASNUMBER
+  _hashes $HASHNUMBER
 }
