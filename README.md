@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/claesjaeger/bashlib">
     <img src="images/bashlib.png" alt="Logo" width="500 heigth="500">
   </a>
 
@@ -38,14 +38,14 @@
   <p align="center">
     A collection of functions that come in handy and can be reused in several scripts.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/claesjaeger/bashlib"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/claesjaeger/bashlib">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/claesjaeger/bashlib/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/claesjaeger/bashlib/issues">Request Feature</a>
   </p>
 </div>
 
@@ -81,10 +81,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This library is a collection of functions that can be imported and reused across your bash scripts.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+I have not found a good solution for a library in Bash. So this is the solution I am using, until I find something better.
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+The content of the lib will be extended, when ever a function that can be reused turns up.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +95,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![BourneAgainSHell][Bash.Logo]][Bash-url]
 * [![Vim][Vim.Logo]][Vim-url]
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -102,31 +102,27 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+It is simple to use the lib. Just clone it to you home folder, and source it in your scripts
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Bash shell on your system
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo to you user folder
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/claesjaeger/bashlib.git
    ```
-3. Install NPM packages
+3. Source the main script in you bash scripts
    ```sh
-   npm install
+   source $HOME/bashlib/bashlib.bash
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Call the funtions in your script
+   ```sh
+   printHelp "-h"
+   
+   HEADERLENGTH=80
+   header "Cool Header" $HEADERLENGTH
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -135,10 +131,22 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+```
+# Print help for at function. See printHelp.bash on how to format the help
+printHelp "-h"
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+# Print a header with the text parsen to the function as arg1, and the width parsed as arg2
+HEADERLENGTH=80
+header "Cool Header" $HEADERLENGTH
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+# Supress the output from the command, and show a spinner while the command finished
+(sudo apt-get update> /dev/null 2>&1) &
+spinner $!
+
+# capture a password entered in the terminal, and replace all chars with *
+password=$(ask "Enter Password")
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,12 +155,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Make a library that can be included in Bash scripts
+- [x] Update Readme to reflect project status
+- [ ] Planned functions to add
+    - [ ] No functions planned at the moment
+    - [ ] No functions planned at the moment
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/claesjaeger/bashlib/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,9 +197,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Claes Jæger - claeslund@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/claesjaeger/bashlib](https://github.com/claesjaeger/bashlib)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,18 +218,18 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/claesjaeger/bashlib.svg?style=for-the-badge
+[contributors-url]: https://github.com/claesjaeger/bashlib/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/claesjaeger/bashlib.svg?style=for-the-badge
+[forks-url]: https://github.com/claesjaeger/bashlib/network/members
+[stars-shield]: https://img.shields.io/github/stars/claesjaeger/bashlib.svg?style=for-the-badge
+[stars-url]: https://github.com/claesjaeger/bashlib/stargazers
+[issues-shield]: https://img.shields.io/github/issues/claesjaeger/bashlib.svg?style=for-the-badge
+[issues-url]: https://github.com/claesjaeger/bashlib/issues
+[license-shield]: https://img.shields.io/github/license/claesjaeger/bashlib.svg?style=for-the-badge
+[license-url]: https://github.com/claesjaeger/bashlib/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/claesjaeger
 [product-screenshot]: images/screenshot.png
 [Bash-url]:  https://www.gnu.org/software/bash/
 [Bash.Logo]: https://img.shields.io/badge/Shell-bash?style=for-the-badge&logo=GNU%20Bash&logoColor=green&label=bash&labelColor=grey&color=olive
