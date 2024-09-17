@@ -91,8 +91,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 ### Built With
-* [![Bourne Again SHell]
-* [![made-with-bash][Bash.com][Bash-url]
+* [![BourneAgainSHell][Bash.com][Bash-url]
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
