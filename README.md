@@ -131,7 +131,7 @@ It is simple to use the lib. Just clone it to you home folder, and source it in 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-```
+```sh
 # Print help for at function. See printHelp.bash on how to format the help
 printHelp "-h"
 
